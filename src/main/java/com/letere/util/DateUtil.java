@@ -4,6 +4,9 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
+/**
+ * 日期工具类
+ */
 public class DateUtil {
 
     public static class DateTime {
@@ -28,8 +31,8 @@ public class DateUtil {
 
     /**
      * LocalDateTime转Date
-     * @param localDateTime
-     * @return
+     * @param localDateTime 时间
+     * @return 时间(Date类型)
      */
     public static Date toDate(LocalDateTime localDateTime) {
         if (localDateTime == null) {
@@ -40,8 +43,8 @@ public class DateUtil {
 
     /**
      * Date转LocalDateTime
-     * @param date
-     * @return
+     * @param date 时间
+     * @return 时间(LocalDateTime类型)
      */
     public static LocalDateTime toLocalDateTime(Date date) {
         if (date == null) {
@@ -52,8 +55,8 @@ public class DateUtil {
 
     /**
      * 获取当天的开始时间
-     * @param localDateTime
-     * @return
+     * @param localDateTime 时间
+     * @return 当日起始时间
      */
     public static DateTime beginOfDay(LocalDateTime localDateTime) {
         return new DateTime(localDateTime.withHour(0).withMinute(0).withSecond(0).withNano(0));
@@ -61,8 +64,8 @@ public class DateUtil {
 
     /**
      * 获取当天的开始时间（重载）
-     * @param date
-     * @return
+     * @param date 时间
+     * @return 当日起始时间
      */
     public static DateTime beginOfDay(Date date) {
         LocalDateTime localDateTime = toLocalDateTime(date);
@@ -71,8 +74,8 @@ public class DateUtil {
 
     /**
      * 获取当周开始时间
-     * @param localDateTime
-     * @return
+     * @param localDateTime 时间
+     * @return 当周起始时间
      */
     public static DateTime beginOfWeek(LocalDateTime localDateTime) {
         localDateTime = localDateTime.withHour(0).withMinute(0).withSecond(0);
@@ -82,8 +85,8 @@ public class DateUtil {
 
     /**
      * 获取当周开始时间（重载）
-     * @param date
-     * @return
+     * @param date 时间
+     * @return 当周起始时间
      */
     public static DateTime beginOfWeek(Date date) {
         LocalDateTime localDateTime = toLocalDateTime(date);
@@ -92,8 +95,8 @@ public class DateUtil {
 
     /**
      * 获取当月开始时间
-     * @param localDateTime
-     * @return
+     * @param localDateTime 时间
+     * @return 当月起始时间
      */
     public static DateTime beginOfMonth(LocalDateTime localDateTime) {
         localDateTime = localDateTime.withHour(0).withMinute(0).withSecond(0).withDayOfMonth(1);
@@ -102,8 +105,8 @@ public class DateUtil {
 
     /**
      * 获取当月开始时间（重载）
-     * @param date
-     * @return
+     * @param date 时间
+     * @return 当月起始时间
      */
     public static DateTime beginOfMonth(Date date) {
         LocalDateTime localDateTime = toLocalDateTime(date);

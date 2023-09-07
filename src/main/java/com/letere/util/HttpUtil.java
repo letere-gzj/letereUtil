@@ -6,8 +6,8 @@ public class HttpUtil {
 
     /**
      * 从request中获取ip地址
-     * @param request
-     * @return
+     * @param request http请求
+     * @return ip地址
      */
     public static String getIpAddr(HttpServletRequest request) {
         String ip = request.getHeader("x-forwarded-for");

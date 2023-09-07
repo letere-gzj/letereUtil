@@ -1,5 +1,8 @@
 package com.letere.util;
 
+/**
+ * 随机码工具类
+ */
 public class CodeUtil {
 
     /**
