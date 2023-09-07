@@ -68,11 +68,4 @@ public class StrUtil {
         }
         return new EncodeStarTemplate(strLen, regexTemplate.toString(), replaceTemplate.toString());
     }
-
-    public static void main(String[] args) {
-        String number = "1234567890";
-        String str = "*1,1,*2,2,*3";
-        String s = encodeWithStar(number, str);
-        System.out.println(s);
-    }
 }
