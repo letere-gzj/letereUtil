@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
+ * '*'号加密模板
  * @author gaozijie
  * @date 2023-05-26
  */

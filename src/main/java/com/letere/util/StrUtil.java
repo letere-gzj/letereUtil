@@ -53,7 +53,7 @@ public class StrUtil {
         int strLen = 0;
         int paramSize;
         // 解析模板
-        String[] params = template.split(",");
+        String[] params = template.split(SPLIT);
         for (String param : params) {
             if (param.contains("*")) {
                 paramSize = Integer.parseInt(param.replace("*", ""));
