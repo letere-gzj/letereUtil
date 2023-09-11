@@ -11,3 +11,4 @@
 + `HttpUtil`：获取IP地址
 + `LocationUtil`：根据IP地址获取用户位置、经纬度计算距离
 + `MathUtil`：求最大公约数、求最小公倍数
++ `CmdUtil`：执行系统命令
