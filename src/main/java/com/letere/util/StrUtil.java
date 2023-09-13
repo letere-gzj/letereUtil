@@ -1,6 +1,7 @@
 package com.letere.util;
 
-import com.letere.bean.EncodeStarTemplate;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import java.util.Objects;
 
@@ -14,6 +15,20 @@ public class StrUtil {
      * 分割符号
      */
     private final static String SPLIT = ",";
+
+    @Data
+    @AllArgsConstructor
+    private static class EncodeStarTemplate {
+        Integer strLen;
+        /**
+         * 正则表达式模板
+         */
+        String regexTemplate;
+        /**
+         * 替换字符模板
+         */
+        String replaceTemplate;
+    }
 
     /**
      * 字符串星号(*)加密
