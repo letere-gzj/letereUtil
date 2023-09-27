@@ -41,13 +41,13 @@ public class CmdUtil {
     }
 
     /**
-     * 执行windows命令
+     * 执行命令
      * @param cmd 命令
      */
     private static Process executeCmd(String cmd) {
         Process process;
         try {
-            process = Runtime.getRuntime().exec("cmd /c " + cmd);
+            process = Runtime.getRuntime().exec(cmd);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
