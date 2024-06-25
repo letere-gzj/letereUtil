@@ -28,7 +28,7 @@ public class SnowflakeUtil {
     /**
      * 机器码（10位，按实际情况修改，不同服务要用不同的机器码区分）
      */
-    private final static long INSTANCE = 1L;
+    private final static long WORK_ID = 1L;
 
     /**
      * 时间戳（41位）
@@ -71,7 +71,7 @@ public class SnowflakeUtil {
         // 时间戳差值左移（64-1-41=22）位
         long handleTimeStamp = (now - START_TIMESTAMP) << 22;
         // 机器码左移（22-10=12）位
-        long handleInstance = INSTANCE << 12;
-        return handleTimeStamp | handleInstance | seq;
+        long handleWorkId = WORK_ID << 12;
+        return handleTimeStamp | handleWorkId | seq;
     }
 }
