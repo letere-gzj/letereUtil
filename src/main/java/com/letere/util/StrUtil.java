@@ -79,6 +79,7 @@ public class StrUtil {
                 regexTemplate.append(String.format("(.{%d})", paramSize));
                 replaceTemplate.append(String.format("$%d", index++));
             }
+            // 测试
             strLen += paramSize;
         }
         return new EncodeStarTemplate(strLen, regexTemplate.toString(), replaceTemplate.toString());
